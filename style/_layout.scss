@@ -4,16 +4,19 @@ header {
     background-color: $color-bg2;
     box-shadow: 0 0 0.5rem $shadow;
     position: relative;
-    h1 {
+    
+    .header__logo {
       font-family: "Shrikhand", "cursive";
-      text-align: center;
       margin: 0;
+      font-size: 2rem;
+      text-align: center;
     }
+
     .header--arrow {
         position: relative;
       }
     
-      a::before {
+    a::before {
         content: "\f060";
         font-family: "Font Awesome 5 Free";
         font-weight: 900;
@@ -24,7 +27,7 @@ header {
         left: 2.5rem;
         font-size: 1.2rem;
         color: black;
-      }
+    }
   }
 
 // Main //

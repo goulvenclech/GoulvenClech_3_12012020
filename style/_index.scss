@@ -1,0 +1,23 @@
+article  {
+.article__cover {
+    overflow: hidden;
+    position: relative;
+
+      img {
+        height: 10rem;
+        width: 100%;
+        object-fit: contain;
+        transform: scale(1.5);
+      }
+
+      &--new {
+        background-color: $color-tertiary;
+        color: darken($color-tertiary, 50%);
+        padding: 0.5rem;
+        border-radius: 0.25rem;
+        right: 0.75rem;
+        position: absolute;
+        z-index: 10;
+      }
+    }
+}

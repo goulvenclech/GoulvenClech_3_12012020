@@ -3,11 +3,32 @@
 body {
   padding: 0;
   margin: 0;
+  background-color: #f6f6f6;
 }
 
-p, h2, h3 {
+p, a, h2, h3, h4 {
   font-family: "Roboto", sans-serif;
-  scroll-behavior: smooth;
+}
+
+h1 {
+  font-family: "Shrikhand", "cursive";
+  font-weight: 500;
+}
+
+h3 {
+  font-weight: 400;
+  text-transform: uppercase;
+  padding-bottom: 0.5rem;
+  position: relative;
+}
+h3::after {
+  content: "";
+  width: 3rem;
+  height: 0.25rem;
+  background-color: #99E2D0;
+  position: absolute;
+  left: 0;
+  bottom: 0;
 }
 
 button {
@@ -18,25 +39,44 @@ button {
   border-radius: 100px;
   color: white;
   background-color: #686868;
-  background-image: linear-gradient(0deg, #9356DC, #FF79DA);
+  background-image: linear-gradient(-10deg, #9356DC, #FF79DA);
   cursor: pointer;
-  box-shadow: 0.25rem 0.25rem 10px rgba(0, 0, 0, 0.25);
+  box-shadow: 0.25rem 0.25rem 10px rgba(0, 0, 0, 0.1);
+  display: block;
+  margin: auto;
 }
 button a {
   text-decoration: none;
   color: inherit;
 }
 
+article {
+  border-radius: 1rem;
+  box-shadow: 0.25rem 0.25rem 10px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  overflow: hidden;
+}
+article .article__text {
+  padding: 0.5rem;
+}
+article .article__text h4 {
+  margin: 0.25rem;
+}
+article .article__text p {
+  margin: 0.25rem;
+}
+
 header {
   padding: 1rem;
   background-color: #fff;
-  box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.25);
+  box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.1);
   position: relative;
 }
-header h1 {
+header .header__logo {
   font-family: "Shrikhand", "cursive";
-  text-align: center;
   margin: 0;
+  font-size: 2rem;
+  text-align: center;
 }
 header .header--arrow {
   position: relative;
@@ -101,6 +141,56 @@ footer ul a {
 }
 footer ul a:hover {
   text-decoration: underline;
+}
+
+article .article__cover {
+  overflow: hidden;
+  position: relative;
+}
+article .article__cover img {
+  height: 10rem;
+  width: 100%;
+  object-fit: contain;
+  transform: scale(1.5);
+}
+article .article__cover--new {
+  background-color: #99E2D0;
+  color: #1b6150;
+  padding: 0.5rem;
+  border-radius: 0.25rem;
+  right: 0.75rem;
+  position: absolute;
+  z-index: 10;
+}
+
+article .article__cover {
+  overflow: hidden;
+  position: relative;
+}
+article .article__cover img {
+  height: 10rem;
+  width: 100%;
+  object-fit: contain;
+  transform: scale(1.5);
+}
+article .article__cover--new {
+  background-color: #99E2D0;
+  color: #1b6150;
+  padding: 0.5rem;
+  border-radius: 0.25rem;
+  right: 0.75rem;
+  position: absolute;
+  z-index: 10;
+}
+
+.hero {
+  max-width: 100%;
+}
+
+main {
+  position: relative;
+  top: -2rem;
+  z-index: 10;
 }
 
 /*# sourceMappingURL=main.css.map */

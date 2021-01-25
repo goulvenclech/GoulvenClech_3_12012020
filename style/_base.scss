@@ -1,19 +1,33 @@
 body {
   padding: 0;
   margin: 0;
+  background-color: $color-bg;
 }
 
-p, h2, h3 {
+p, a, h2, h3, h4 {
   font-family: 'Roboto', sans-serif;
-  scroll-behavior: smooth;
 }
 
-h2 {
-
+h1 {
+  font-family: "Shrikhand", "cursive";
+  font-weight: 500;
 }
 
 h3 {
-  
+  font-weight: 400;
+  text-transform: uppercase;
+  padding-bottom: 0.5rem;
+  position: relative;
+
+  &::after {
+    content: "";
+    width: 3rem;
+    height: 0.25rem;
+    background-color: $color-tertiary;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+  }
 }
 
 button {
@@ -24,13 +38,37 @@ button {
   border-radius: 100px;
   color: white;
   background-color: rgb(104, 104, 104);
-  background-image: linear-gradient(0deg, $color-primary, $color-secondary);
+  background-image: linear-gradient(-10deg, $color-primary, $color-secondary);
   cursor: pointer;
   box-shadow: 0.25rem 0.25rem 10px $shadow;
-
+  display: block;
+  margin: auto;
+  
   a {
     text-decoration: none;
     color: inherit;
   }
 }
 
+@mixin box {
+  border-radius: 1rem;
+  box-shadow: 0.25rem 0.25rem 10px $shadow;
+}
+
+article {
+  @include box;
+  background-color: $color-bg2;
+  overflow: hidden;
+
+  .article__text {
+    padding: 0.5rem;
+
+    h4 {
+      margin: 0.25rem;
+    }
+
+    p {
+      margin: 0.25rem;
+    }
+  }
+}
