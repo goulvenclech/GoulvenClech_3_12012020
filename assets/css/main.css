@@ -1,7 +1,106 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&family=Shrikhand&display=swap");
+body {
+  padding: 0;
+  margin: 0;
+}
+
+p, h2, h3 {
+  font-family: "Roboto", sans-serif;
+  scroll-behavior: smooth;
+}
+
+button {
+  border: 0;
+  padding: 0.75rem 1.5rem;
+  font-weight: 500;
+  font-size: 1.1rem;
+  border-radius: 100px;
+  color: white;
+  background-color: #686868;
+  background-image: linear-gradient(0deg, #9356DC, #FF79DA);
+  cursor: pointer;
+  box-shadow: 0.25rem 0.25rem 10px rgba(0, 0, 0, 0.25);
+}
+button a {
+  text-decoration: none;
+  color: inherit;
+}
+
+header {
+  padding: 1rem;
+  background-color: #fff;
+  box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.25);
+  position: relative;
+}
 header h1 {
   font-family: "Shrikhand", "cursive";
   text-align: center;
+  margin: 0;
+}
+header .header--arrow {
+  position: relative;
+}
+header a::before {
+  content: "";
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  display: inline-block;
+  color: white;
+  position: absolute;
+  top: 1.8rem;
+  left: 2.5rem;
+  font-size: 1.2rem;
+  color: black;
+}
+
+main {
+  margin: auto;
+  padding: 1rem;
+  background-color: #f6f6f6;
+  border-radius: 2rem 2rem 0 0;
+}
+
+footer {
+  background-color: #353535;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+}
+footer .footer__logo {
+  color: white;
+  font-family: "Shrikhand", "cursive";
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+footer ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+footer ul li {
+  margin: 0.5rem 0;
+}
+footer ul li:before {
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  display: inline-block;
+  color: white;
+  margin-right: 0.5rem;
+  width: 1rem;
+}
+footer ul li:first-child::before {
+  content: "";
+}
+footer ul li:nth-of-type(2)::before {
+  content: "";
+}
+footer ul a {
+  color: white;
+  text-decoration: none;
+}
+footer ul a:hover {
+  text-decoration: underline;
 }
 
 /*# sourceMappingURL=main.css.map */

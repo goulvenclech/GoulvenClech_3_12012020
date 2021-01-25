@@ -1,0 +1,86 @@
+// Header //
+header {  
+    padding: $padding-app;
+    background-color: $color-bg2;
+    box-shadow: 0 0 0.5rem $shadow;
+    position: relative;
+    h1 {
+      font-family: "Shrikhand", "cursive";
+      text-align: center;
+      margin: 0;
+    }
+    .header--arrow {
+        position: relative;
+      }
+    
+      a::before {
+        content: "\f060";
+        font-family: "Font Awesome 5 Free";
+        font-weight: 900;
+        display: inline-block;
+        color: white;
+        position: absolute;
+        top: 1.8rem;
+        left: 2.5rem;
+        font-size: 1.2rem;
+        color: black;
+      }
+  }
+
+// Main //
+main {
+    margin: auto;
+    padding: $padding-app;
+    background-color: $color-bg;
+    border-radius: 2rem 2rem 0 0;
+}
+
+// Footer //
+footer {
+    background-color: $color-bg3;
+    padding: $padding-app;
+    display: flex;
+    flex-direction: column;
+
+    .footer__logo {
+        color: white;
+        font-family: "Shrikhand", "cursive";
+        font-size: 1.2rem;
+        margin-bottom: 0.5rem;
+    }
+
+    ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+
+        li {
+            margin: 0.5rem 0;
+
+            &:before {
+                font-family: "Font Awesome 5 Free";
+                font-weight: 900;
+                display: inline-block;
+                color: white;
+                margin-right: 0.5rem;
+                width: 1rem;
+            }
+
+            &:first-child::before {
+                content: "\f2e7";
+            }
+            &:nth-of-type(2)::before {
+                content: "\f4c4";
+            }
+        }
+    
+        a {
+            color: white;
+            text-decoration: none;
+    
+            &:hover {
+            text-decoration: underline;
+            }
+        }
+    }
+}
