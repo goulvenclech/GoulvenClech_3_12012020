@@ -1,8 +1,8 @@
 To do :
-[] squelette base
-[] squelette layout
+[x] squelette base
+[x] squelette layout
 
-[] squelette main
+[x] squelette main
 [] animations main
 [] responsive main
 
@@ -10,18 +10,21 @@ To do :
 [] animations resto
 [] responsive resto
 
-[] squelette index
+[x] squelette index
+    [] Images + srcset
 [] animations index
 [] responsive index
 
-[] 
+[] @import -> @use
+[] @mixin pour FontAwesome ?
+[] condition change couleur font
+[] Ajouter dans ReadMe les guideslines
 
 
 Semainiers :
 1 à 2 - squelette
 3 - animations
 4 - responsive
-(5 - peaufinage)
 
 Deadline :
 18/02/2020

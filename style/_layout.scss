@@ -4,12 +4,15 @@ header {
     background-color: $color-bg2;
     box-shadow: 0 0 0.5rem $shadow;
     position: relative;
+    z-index: 20;
+    padding: 1rem 1rem 0.5rem 1rem;
     
     .header__logo {
       font-family: "Shrikhand", "cursive";
       margin: 0;
-      font-size: 2rem;
+      font-size: 1.9rem;
       text-align: center;
+      line-height: 2.25rem;
     }
 
     .header--arrow {
@@ -34,8 +37,8 @@ header {
 main {
     margin: auto;
     padding: $padding-app;
-    background-color: $color-bg;
-    border-radius: 2rem 2rem 0 0;
+    // background-color: $color-bg;
+    // border-radius: 2rem 2rem 0 0;
 }
 
 // Footer //

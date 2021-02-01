@@ -1,5 +1,130 @@
+.hero {
+  text-align: center;
+  &__location {
+    background-color: darken($color-bg, 5%);
+    margin: 1rem -1rem;
+    padding: 1rem;
+
+    &::before {
+      font-family: "Font Awesome 5 Free";
+      font-weight: 900;
+      display: inline-block;
+      margin-right: 0.75rem;
+      width: 1rem;
+      content: "\f3c5";
+    }
+  }
+
+  &__wrapper {
+    padding: 2rem;
+  }
+
+  &__title {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 600;
+  }
+
+  &__subtitle {
+    margin: 0;
+    font-weight: 300;
+  }
+
+  &__cta {
+    font-weight: 600;
+    margin-top: 2rem;
+  }
+}
+
+.features {
+  background-color: $color-bg2;
+  margin: 1rem -1rem;
+  padding: 3rem 1rem;
+}
+
+.feature {
+    @include box;
+    background-color: $color-bg;
+    padding: 0.5rem;
+    margin: 1rem 0 1rem 1rem;
+    font-weight: 600;
+    position: relative;
+
+    &::before {
+        content: "1";
+        font-weight: 400;
+        font-family: 'Roboto', sans-serif;
+        font-size: 0.8rem;
+        color: white;
+        background-color: $color-primary;
+        padding: 0.25rem 0.5rem;
+        border-radius: 2rem;
+        position: absolute;
+        left: -1rem;
+        top: 1.4rem;
+    }
+
+    &:nth-of-type(1)::before {
+      content: "1";
+    }
+
+    &:nth-of-type(2)::before {
+      content: "2";
+    }
+
+    &:nth-of-type(3)::before {
+      content: "3";
+    }
+
+    &__text{
+      &::before {
+        font-family: "Font Awesome 5 Free";
+        font-weight: 900;
+        display: inline-block;
+        color: darken($color-bg, 40%);
+        margin: 0 1.25rem 0 1.5rem;
+        width: 1rem;
+      }
+    }
+
+    &:nth-of-type(1) .feature__text::before {
+      content: "\f3cd";
+    }
+
+    &:nth-of-type(2) .feature__text::before {
+      content: "\f0ca";
+    }
+
+    &:nth-of-type(3) .feature__text::before {
+      content: "\f54e";
+    }
+}
+
+.restaurants {
+  margin-top: 3rem;
+
+  h4 {
+    font-size: 1.2rem;
+  }
+}
+
+.article__text--heart {
+  position: relative;
+
+  &::after {
+    content: "\f004";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 300;
+    font-size: 1.5rem;
+    position: absolute;
+    right: 1.25rem;
+    top: 1.25rem;
+  }
+}
+
 article  {
-.article__cover {
+  margin-bottom: 1rem;
+  .article__cover {
     overflow: hidden;
     position: relative;
 
