@@ -17,6 +17,7 @@ h1, h2 {
 h1 {
   font-family: "Shrikhand", "cursive";
   font-weight: 500;
+  font-size: 1.75rem;
 }
 
 h3 {
@@ -238,7 +239,7 @@ article .article__text p {
 }
 
 .restaurants {
-  margin-top: 3rem;
+  margin: 3rem 0;
 }
 .restaurants a {
   text-decoration: none;
@@ -257,6 +258,9 @@ article .article__text p {
 
 article {
   margin-bottom: 1rem;
+}
+article h4 {
+  font-size: 1.1rem;
 }
 article .article__cover {
   overflow: hidden;
@@ -288,6 +292,19 @@ article .article__cover--new {
   z-index: 10;
   background-color: #f6f6f6;
   border-radius: 2rem 2rem 0 0;
+}
+.main--resto h1 {
+  margin-top: 1rem;
+}
+.main--resto h1::after {
+  font-family: "Font Awesome 5 Free";
+  font-weight: 400;
+  display: inline-block;
+  position: absolute;
+  right: 2.5rem;
+  top: 2.25rem;
+  width: 1rem;
+  content: "";
 }
 
 .menu__wrapper {
