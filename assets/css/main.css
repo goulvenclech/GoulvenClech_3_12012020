@@ -299,7 +299,7 @@ article .article__cover--new {
 .menu__price {
   position: absolute;
   bottom: 0.5rem;
-  right: 1rem;
+  right: 0.5rem;
   font-weight: 600;
 }
 
