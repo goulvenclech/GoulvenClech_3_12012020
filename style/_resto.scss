@@ -19,8 +19,14 @@
         }
     }
 
+    &__description {
+        font-size: 0.9rem;
+        font-weight: 300;
+    }
+
     &__price {
         position: absolute;
+        font-size: 0.9rem;
         bottom: 0.5rem;
         right: 0.5rem;
         font-weight: 600;
