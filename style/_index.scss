@@ -2,7 +2,7 @@
   text-align: center;
   &__location {
     background-color: darken($color-bg, 5%);
-    margin: 1rem -1rem;
+    margin: 0rem -1rem 1rem -1rem;
     padding: 1rem;
 
     &::before {
@@ -103,11 +103,9 @@
 .restaurants {
   margin-top: 3rem;
 
-  h4 {
-    a {
-      text-decoration: none;
-      color: inherit;
-    }
+  a {
+    text-decoration: none;
+    color: inherit;
   }
 }
 
