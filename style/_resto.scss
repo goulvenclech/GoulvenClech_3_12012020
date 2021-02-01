@@ -2,8 +2,27 @@
     max-width: 100%;
 }
 
-main {
+.main--resto {
     position: relative;
     top: -2rem;
     z-index: 10;
+    background-color: $color-bg;
+    border-radius: 2rem 2rem 0 0;
+}
+
+.menu {
+    &__wrapper {
+        margin: 2.5rem 0;
+
+        h4 {
+            font-size: 1.2rem;
+        }
+    }
+
+    &__price {
+        position: absolute;
+        bottom: 0.5rem;
+        right: 1rem;
+        font-weight: 600;
+    }
 }

@@ -60,7 +60,7 @@ header a::before {
   display: inline-block;
   color: white;
   position: absolute;
-  top: 1.8rem;
+  top: 1.5rem;
   left: 2.5rem;
   font-size: 1.2rem;
   color: black;
@@ -140,6 +140,7 @@ article {
 }
 article .article__text {
   padding: 0.5rem;
+  position: relative;
 }
 article .article__text h4 {
   margin: 0.25rem;
@@ -239,13 +240,11 @@ article .article__text p {
 .restaurants {
   margin-top: 3rem;
 }
-.restaurants h4 {
-  font-size: 1.2rem;
+.restaurants h4 a {
+  text-decoration: none;
+  color: inherit;
 }
 
-.article__text--heart {
-  position: relative;
-}
 .article__text--heart::after {
   content: "";
   font-family: "Font Awesome 5 Free";
@@ -283,10 +282,25 @@ article .article__cover--new {
   max-width: 100%;
 }
 
-main {
+.main--resto {
   position: relative;
   top: -2rem;
   z-index: 10;
+  background-color: #f6f6f6;
+  border-radius: 2rem 2rem 0 0;
+}
+
+.menu__wrapper {
+  margin: 2.5rem 0;
+}
+.menu__wrapper h4 {
+  font-size: 1.2rem;
+}
+.menu__price {
+  position: absolute;
+  bottom: 0.5rem;
+  right: 1rem;
+  font-weight: 600;
 }
 
 /*# sourceMappingURL=main.css.map */
