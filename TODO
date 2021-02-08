@@ -3,7 +3,7 @@ To do :
 [x] squelette layout
 
 [x] squelette main
-[] animations main
+[x] animations main
 [] responsive main
 
 [x] squelette resto
@@ -11,7 +11,8 @@ To do :
 [] responsive resto
 
 [x] squelette index
-[] animations index
+[x] animations index
+    [] animation heart
 [] responsive index
 
 [] @import -> @use

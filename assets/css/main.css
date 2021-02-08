@@ -128,6 +128,9 @@ button {
   display: block;
   margin: auto;
 }
+button:hover {
+  box-shadow: 0.25rem 0.25rem 10px rgba(0, 0, 0, 0.3);
+}
 button a {
   text-decoration: none;
   color: inherit;
@@ -140,6 +143,12 @@ article {
   overflow: hidden;
   margin-bottom: 1rem;
 }
+article:hover {
+  box-shadow: 0.25rem 0.25rem 10px rgba(0, 0, 0, 0.3);
+}
+article:hover .article__cover img {
+  transform: scale(1.1);
+}
 article .article__cover {
   overflow: hidden;
   position: relative;
@@ -148,6 +157,7 @@ article .article__cover img {
   height: 10rem;
   width: 100%;
   object-fit: cover;
+  transition-duration: 0.5s;
 }
 article .article__cover--new {
   background-color: #99E2D0;
@@ -168,6 +178,24 @@ article .article__text h4 {
 }
 article .article__text p {
   margin: 0.25rem;
+}
+article .article__text--heart::after {
+  content: "";
+  font-family: "Font Awesome 5 Free";
+  font-weight: 300;
+  font-size: 1.5rem;
+  position: absolute;
+  right: 1.25rem;
+  top: 1.25rem;
+  display: block;
+  transition-duration: 0.5s;
+}
+article .article__text--heart:hover::after {
+  font-weight: 900;
+  background-image: linear-gradient(-10deg, #9356DC, #FF79DA);
+  color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
 }
 
 @keyframes disappear {
@@ -269,6 +297,12 @@ article .article__text p {
   margin: 1rem 0 1rem 1rem;
   font-weight: 600;
   position: relative;
+  transition-duration: 0.2s;
+  transition-property: background-color;
+}
+.feature:hover {
+  background-color: #f2eafb;
+  box-shadow: 0.25rem 0.25rem 10px rgba(0, 0, 0, 0.3);
 }
 .feature::before {
   content: "1";
@@ -316,16 +350,6 @@ article .article__text p {
 .restaurants a {
   text-decoration: none;
   color: inherit;
-}
-
-.article__text--heart::after {
-  content: "";
-  font-family: "Font Awesome 5 Free";
-  font-weight: 300;
-  font-size: 1.5rem;
-  position: absolute;
-  right: 1.25rem;
-  top: 1.25rem;
 }
 
 @keyframes appear {
