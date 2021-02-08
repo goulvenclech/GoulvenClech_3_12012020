@@ -10,4 +10,4 @@ Dépendances : Aucune
 
 Dépendances dev : `Sass 1.32`
 
-Live reload Sass : `watch sass ./style/main.scss ./assets/css/main.css`
+Live reload Sass : `sass --watch ./style/main.scss ./assets/css/main.css`

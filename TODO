@@ -6,12 +6,11 @@ To do :
 [] animations main
 [] responsive main
 
-[] squelette resto
+[x] squelette resto
 [] animations resto
 [] responsive resto
 
 [x] squelette index
-    [] Images + srcset
 [] animations index
 [] responsive index
 
@@ -23,9 +22,9 @@ To do :
 [] boucle for pour features (ou fonction counter)
 [] Corriger h2 h3 h4 
 [] mail to
+[] srcset
 
 [] Animation check plat -> flex + overflow hidden
-
 
 Semainiers :
 1 à 2 - squelette
