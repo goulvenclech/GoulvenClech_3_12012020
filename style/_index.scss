@@ -45,69 +45,58 @@
 }
 
 .feature {
-    @include box;
-    background-color: $color-bg;
-    padding: 0.5rem;
-    margin: 1rem 0 1rem 1rem;
-    font-weight: 600;
-    position: relative;
-    transition-duration: 0.2s;
-    transition-property: background-color;
+  @include box;
+  background-color: $color-bg;
+  padding: 0.5rem;
+  margin: 1rem 0 1rem 1rem;
+  font-weight: 600;
+  position: relative;
+  transition-duration: 0.2s;
+  transition-property: background-color;
 
-    &:hover {
-      background-color: lighten($color-primary, 35%);
-      box-shadow: 0.25rem 0.25rem 10px rgba($shadow, 0.3);
-    }
+  &:hover {
+    background-color: lighten($color-primary, 35%);
+    box-shadow: 0.25rem 0.25rem 10px rgba($shadow, 0.3);
+  }
 
-    &::before {
-        content: "1";
-        font-weight: 400;
-        font-family: 'Roboto', sans-serif;
-        font-size: 0.8rem;
-        color: white;
-        background-color: $color-primary;
-        padding: 0.25rem 0.5rem;
-        border-radius: 2rem;
-        position: absolute;
-        left: -1rem;
-        top: 1.4rem;
-    }
-
-    // boucle for
-    &:nth-of-type(1)::before {
+  &::before {
       content: "1";
-    }
+      font-weight: 400;
+      font-family: 'Roboto', sans-serif;
+      font-size: 0.8rem;
+      color: white;
+      background-color: $color-primary;
+      padding: 0.25rem 0.5rem;
+      border-radius: 2rem;
+      position: absolute;
+      left: -1rem;
+      top: 1.4rem;
+  }
 
-    &:nth-of-type(2)::before {
-      content: "2";
+  // boucle for
+  @for $i from 1 through 3 {
+    &:nth-of-type(#{$i})::before {
+      content: "#{$i}";
     }
+  }
 
-    &:nth-of-type(3)::before {
-      content: "3";
+  &__text{
+    &::before {
+      font-family: "Font Awesome 5 Free";
+      font-weight: 900;
+      display: inline-block;
+      color: darken($color-bg, 40%);
+      margin: 0 1.25rem 0 1.5rem;
+      width: 1rem;
     }
+  }
 
-    &__text{
-      &::before {
-        font-family: "Font Awesome 5 Free";
-        font-weight: 900;
-        display: inline-block;
-        color: darken($color-bg, 40%);
-        margin: 0 1.25rem 0 1.5rem;
-        width: 1rem;
-      }
+  $feature__content: (1: "\f3cd", 2: "\f0ca", 3: "\f54e");
+  @each $i, $content in $feature__content {
+    &:nth-of-type(#{$i}) .feature__text::before {
+      content: "#{$content}";
     }
-
-    &:nth-of-type(1) .feature__text::before {
-      content: "\f3cd";
-    }
-
-    &:nth-of-type(2) .feature__text::before {
-      content: "\f0ca";
-    }
-
-    &:nth-of-type(3) .feature__text::before {
-      content: "\f54e";
-    }
+  }
 }
 
 .restaurants {
