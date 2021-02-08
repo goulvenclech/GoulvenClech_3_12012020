@@ -391,23 +391,77 @@ article .article__text--heart:hover::after {
   width: 1rem;
   content: "";
 }
+.main--resto article {
+  opacity: 0;
+  top: 1rem;
+  transition-duration: 2s;
+  position: relative;
+}
+.main--resto article:nth-of-type(1) {
+  animation: chainappear 1s 0.1s forwards;
+}
+.main--resto article:nth-of-type(2) {
+  animation: chainappear 1s 0.2s forwards;
+}
+.main--resto article:nth-of-type(3) {
+  animation: chainappear 1s 0.3s forwards;
+}
 
 .menu__wrapper {
   margin: 2.5rem 0;
 }
 .menu__wrapper h4 {
   font-size: 1.2rem;
+  margin: 0;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+.menu article {
+  display: flex;
+  max-width: 100%;
+  padding: 1rem;
+}
+.menu__article {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  flex: 1;
 }
 .menu__description {
   font-size: 0.9rem;
   font-weight: 300;
+  margin: 0;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
 }
 .menu__price {
-  position: absolute;
   font-size: 0.9rem;
-  bottom: 0.5rem;
-  right: 0.5rem;
   font-weight: 600;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  padding-left: 0.5rem;
+}
+.menu__confirm {
+  background-color: #99E2D0;
+  margin: -1rem -5rem -1rem 1rem;
+  width: 4rem;
+  display: flex;
+}
+.menu__confirm::after {
+  content: "%";
+}
+.menu:hover .menu__confirm {
+  margin-right: -1rem;
+}
+
+@keyframes chainappear {
+  to {
+    opacity: 1;
+    top: 0;
+  }
 }
 
 /*# sourceMappingURL=main.css.map */

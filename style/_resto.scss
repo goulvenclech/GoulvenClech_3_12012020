@@ -10,7 +10,7 @@
     z-index: 10;
     background-color: $color-bg;
     border-radius: 2rem 2rem 0 0;
-
+    
     h1 {
         margin-top: 1rem;
 
@@ -25,6 +25,31 @@
             content: "\f004";
         }
     }
+
+    article {
+        opacity: 0;
+        top: 1rem;
+        transition-duration: 2s;
+        position: relative;
+        // Scss sucks, doesn't scale over 10 items
+        // Html sucks, can't nth-of-type() all over the doc
+        // $article-counter: 0;
+        // @for $i from 1 through 10 {
+        //    &:nth-of-type(#{$i}) {
+        //     animation: chainappear 1s #{$i * 0.1 + ($article-counter * 0.3)}s forwards;
+        //     @if $i % 3 == 0 {
+        //        $article-counter: $article-counter + 1;
+        //        @debug "#{$article-counter} - #{$i}"
+        //     }
+        //    }
+        //}
+        @for $i from 1 through 3 {
+            &:nth-of-type(#{$i}) {
+                animation: chainappear 1s #{$i * 0.1}s forwards;
+            }
+        }
+        
+    }
 }
 
 .menu {
@@ -34,19 +59,65 @@
 
         h4 {
             font-size: 1.2rem;
+            margin: 0;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            overflow: hidden;
         }
+    }
+
+    article {
+        display: flex;
+        max-width: 100%;
+        padding: 1rem;
+    }
+
+    // H4 + description
+    &__article {
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        flex: 1;
     }
 
     &__description {
         font-size: 0.9rem;
         font-weight: 300;
+        margin: 0;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
     }
 
     &__price {
-        position: absolute;
         font-size: 0.9rem;
-        bottom: 0.5rem;
-        right: 0.5rem;
         font-weight: 600;
+        display: flex;
+        justify-content: flex-end;
+        align-items: flex-end;
+        padding-left: 0.5rem;
+    }
+
+    &__confirm {
+        background-color: $color-tertiary;
+        margin: -1rem -5rem -1rem 1rem;
+        width: 4rem;
+        display: flex;
+
+        &::after {
+            content: "%";
+        }
+    }
+
+    &:hover &__confirm {
+        margin-right: -1rem;
+    }
+}
+
+// Chain apparition animation
+@keyframes chainappear {
+    to {
+        opacity: 1;
+        top: 0;
     }
 }
