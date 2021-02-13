@@ -417,10 +417,9 @@ article .article__text--heart:hover::after {
   text-overflow: ellipsis;
   overflow: hidden;
 }
-.menu article {
+.menu__wrapper article {
   display: flex;
   max-width: 100%;
-  padding: 1rem;
 }
 .menu__article {
   white-space: nowrap;
@@ -439,22 +438,38 @@ article .article__text--heart:hover::after {
 .menu__price {
   font-size: 0.9rem;
   font-weight: 600;
+  padding: 0 0.75rem 0.75rem 0;
+  margin: 0;
   display: flex;
   justify-content: flex-end;
   align-items: flex-end;
-  padding-left: 0.5rem;
 }
 .menu__confirm {
   background-color: #99E2D0;
-  margin: -1rem -5rem -1rem 1rem;
+  margin-right: -4rem;
   width: 4rem;
   display: flex;
+  align-items: center;
+  justify-content: center;
+  transition-duration: 0.5s;
 }
 .menu__confirm::after {
-  content: "%";
+  content: "";
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  font-size: 1rem;
+  color: #99E2D0;
+  border-radius: 1rem;
+  padding: 5px;
+  background-color: #f6f6f6;
+  transform: rotate(180deg);
+  transition-duration: 0.5s;
 }
-.menu:hover .menu__confirm {
-  margin-right: -1rem;
+article:hover .menu__confirm {
+  margin-right: 0rem;
+}
+article:hover .menu__confirm::after {
+  transform: rotate(0);
 }
 
 @keyframes chainappear {

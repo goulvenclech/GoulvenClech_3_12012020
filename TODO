@@ -7,7 +7,8 @@ To do :
 [] responsive main
 
 [x] squelette resto
-[] animations resto
+[x] animations resto
+    [] fix animation loading plat
 [] responsive resto
 
 [x] squelette index
@@ -20,12 +21,9 @@ To do :
 [] condition change couleur font
 [] Ajouter dans ReadMe les guideslines
 [] Revoir style bouton index vs resto
-[] boucle for pour features (ou fonction counter)
 [] Corriger h2 h3 h4 
 [] mail to
 [] srcset
-
-[] Animation check plat -> flex + overflow hidden
 
 Semainiers :
 1 à 2 - squelette
