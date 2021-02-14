@@ -27,6 +27,29 @@ button {
   box-shadow: 0.25rem 0.25rem 10px $shadow;
 }
 
+@mixin like {
+    display: flex;
+    align-items: center;
+    padding-right: 0.5rem;
+
+    &::after {
+      content: "\f004";
+        font-family: "Font Awesome 5 Free";
+        font-weight: 300;
+        font-size: inherit;
+        display: block;
+        transition-duration: 0.5s;
+    }
+
+    &:hover::after {
+      font-weight: 900;
+      background-image: linear-gradient(-10deg, $color-primary, $color-secondary);
+      color: transparent;
+      -webkit-background-clip: text;
+      background-clip: text;
+    }
+}
+
 article {
   @include box;
   background-color: $color-bg2;
@@ -67,6 +90,12 @@ article {
     padding: 0.5rem;
     position: relative;
 
+    display: flex;
+
+    &--wrapper {
+      flex: 1;
+    }
+
     h4 {
       margin: 0.25rem;
       font-size: 1.1rem;
@@ -75,28 +104,11 @@ article {
     p {
       margin: 0.25rem;
     }
+  }
 
-    &--heart {
-      &::after {
-        content: "\f004";
-        font-family: "Font Awesome 5 Free";
-        font-weight: 300;
-        font-size: 1.5rem;
-        position: absolute;
-        right: 1.25rem;
-        top: 1.25rem;
-        display: block;
-        transition-duration: 0.5s;
-      }
-
-      &:hover::after {
-        font-weight: 900;
-        background-image: linear-gradient(-10deg, $color-primary, $color-secondary);
-        color: transparent;
-        -webkit-background-clip: text;
-        background-clip: text;
-      }
-    }
+  .article__heart {
+    @include like;
+    font-size: 1.5rem;
   }
 }
 

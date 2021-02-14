@@ -171,6 +171,10 @@ article .article__cover--new {
 article .article__text {
   padding: 0.5rem;
   position: relative;
+  display: flex;
+}
+article .article__text--wrapper {
+  flex: 1;
 }
 article .article__text h4 {
   margin: 0.25rem;
@@ -179,18 +183,21 @@ article .article__text h4 {
 article .article__text p {
   margin: 0.25rem;
 }
-article .article__text--heart::after {
+article .article__heart {
+  display: flex;
+  align-items: center;
+  padding-right: 0.5rem;
+  font-size: 1.5rem;
+}
+article .article__heart::after {
   content: "";
   font-family: "Font Awesome 5 Free";
   font-weight: 300;
-  font-size: 1.5rem;
-  position: absolute;
-  right: 1.25rem;
-  top: 1.25rem;
+  font-size: inherit;
   display: block;
   transition-duration: 0.5s;
 }
-article .article__text--heart:hover::after {
+article .article__heart:hover::after {
   font-weight: 900;
   background-image: linear-gradient(-10deg, #9356DC, #FF79DA);
   color: transparent;
@@ -379,17 +386,33 @@ article .article__text--heart:hover::after {
   border-radius: 2rem 2rem 0 0;
 }
 .main--resto h1 {
-  margin-top: 1rem;
+  margin: 0.75rem 0;
+  flex: 1;
+  display: block;
 }
-.main--resto h1::after {
-  font-family: "Font Awesome 5 Free";
-  font-weight: 400;
-  display: inline-block;
-  position: absolute;
-  right: 2.5rem;
-  top: 2.25rem;
-  width: 1rem;
+.main__title {
+  display: flex;
+}
+.main__heart {
+  display: flex;
+  align-items: center;
+  padding-right: 0.5rem;
+  font-size: 2rem;
+}
+.main__heart::after {
   content: "";
+  font-family: "Font Awesome 5 Free";
+  font-weight: 300;
+  font-size: inherit;
+  display: block;
+  transition-duration: 0.5s;
+}
+.main__heart:hover::after {
+  font-weight: 900;
+  background-image: linear-gradient(-10deg, #9356DC, #FF79DA);
+  color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
 }
 
 .menu__wrapper {
@@ -403,20 +426,11 @@ article .article__text--heart:hover::after {
   overflow: hidden;
 }
 .menu__wrapper article {
-  display: flex;
   max-width: 100%;
   opacity: 0;
   top: 1rem;
   position: relative;
-}
-.menu__wrapper:nth-of-type(1) article:nth-of-type(1) {
-  animation: chainappear 1s -0.2s forwards;
-}
-.menu__wrapper:nth-of-type(1) article:nth-of-type(2) {
-  animation: chainappear 1s 0s forwards;
-}
-.menu__wrapper:nth-of-type(1) article:nth-of-type(3) {
-  animation: chainappear 1s 0.2s forwards;
+  display: flex;
 }
 .menu__wrapper:nth-of-type(2) article:nth-of-type(1) {
   animation: chainappear 1s 0.4s forwards;
@@ -436,10 +450,20 @@ article .article__text--heart:hover::after {
 .menu__wrapper:nth-of-type(3) article:nth-of-type(3) {
   animation: chainappear 1s 1.4s forwards;
 }
+.menu__wrapper:nth-of-type(4) article:nth-of-type(1) {
+  animation: chainappear 1s 1.6s forwards;
+}
+.menu__wrapper:nth-of-type(4) article:nth-of-type(2) {
+  animation: chainappear 1s 1.8s forwards;
+}
+.menu__wrapper:nth-of-type(4) article:nth-of-type(3) {
+  animation: chainappear 1s 2s forwards;
+}
 .menu__article {
   white-space: nowrap;
   text-overflow: ellipsis;
   overflow: hidden;
+  display: block !important;
   flex: 1;
 }
 .menu__description {
