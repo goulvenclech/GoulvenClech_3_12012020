@@ -391,21 +391,6 @@ article .article__text--heart:hover::after {
   width: 1rem;
   content: "";
 }
-.main--resto article {
-  opacity: 0;
-  top: 1rem;
-  transition-duration: 2s;
-  position: relative;
-}
-.main--resto article:nth-of-type(1) {
-  animation: chainappear 1s 0.1s forwards;
-}
-.main--resto article:nth-of-type(2) {
-  animation: chainappear 1s 0.2s forwards;
-}
-.main--resto article:nth-of-type(3) {
-  animation: chainappear 1s 0.3s forwards;
-}
 
 .menu__wrapper {
   margin: 2.5rem 0;
@@ -420,6 +405,36 @@ article .article__text--heart:hover::after {
 .menu__wrapper article {
   display: flex;
   max-width: 100%;
+  opacity: 0;
+  top: 1rem;
+  position: relative;
+}
+.menu__wrapper:nth-of-type(1) article:nth-of-type(1) {
+  animation: chainappear 1s -0.2s forwards;
+}
+.menu__wrapper:nth-of-type(1) article:nth-of-type(2) {
+  animation: chainappear 1s 0s forwards;
+}
+.menu__wrapper:nth-of-type(1) article:nth-of-type(3) {
+  animation: chainappear 1s 0.2s forwards;
+}
+.menu__wrapper:nth-of-type(2) article:nth-of-type(1) {
+  animation: chainappear 1s 0.4s forwards;
+}
+.menu__wrapper:nth-of-type(2) article:nth-of-type(2) {
+  animation: chainappear 1s 0.6s forwards;
+}
+.menu__wrapper:nth-of-type(2) article:nth-of-type(3) {
+  animation: chainappear 1s 0.8s forwards;
+}
+.menu__wrapper:nth-of-type(3) article:nth-of-type(1) {
+  animation: chainappear 1s 1s forwards;
+}
+.menu__wrapper:nth-of-type(3) article:nth-of-type(2) {
+  animation: chainappear 1s 1.2s forwards;
+}
+.menu__wrapper:nth-of-type(3) article:nth-of-type(3) {
+  animation: chainappear 1s 1.4s forwards;
 }
 .menu__article {
   white-space: nowrap;

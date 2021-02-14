@@ -25,19 +25,6 @@
             content: "\f004";
         }
     }
-
-    article {
-        opacity: 0;
-        top: 1rem;
-        transition-duration: 2s;
-        position: relative;
-        @for $i from 1 through 3 {
-            &:nth-of-type(#{$i}) {
-                animation: chainappear 1s #{$i * 0.1}s forwards;
-            }
-        }
-        
-    }
 }
 
 .menu {
@@ -56,7 +43,22 @@
         article {
             display: flex;
             max-width: 100%;
-        }  
+            opacity: 0;
+            top: 1rem;
+            position: relative;   
+        }
+
+        // Works well but doesn't scale tho
+        @for $i from 1 through 3 {
+            &:nth-of-type(#{$i}) article {
+                @for $x from 1 through 3 {
+                    &:nth-of-type(#{$x}) {
+                        animation: chainappear 1s #{$x * 0.2 + $i * 0.6 - 1}s forwards;
+                    }
+                }
+            } 
+        }
+        
     }
     
     // H4 + description
