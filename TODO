@@ -8,16 +8,12 @@ To do :
 
 [x] squelette resto
 [x] animations resto
-    [] fix animation loading plat
 [] responsive resto
 
 [x] squelette index
 [x] animations index
-    [] animation heart
 [] responsive index
 
-[] @import -> @use
-[] @mixin pour FontAwesome ?
 [] condition change couleur font
 [] Ajouter dans ReadMe les guideslines
 [] Revoir style bouton index vs resto
