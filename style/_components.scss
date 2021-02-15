@@ -54,7 +54,6 @@ article {
   @include box;
   background-color: $color-bg2;
   overflow: hidden;
-  margin-bottom: 1rem;
 
   &:hover {
     box-shadow: 0.25rem 0.25rem 10px rgba($shadow, 0.3);

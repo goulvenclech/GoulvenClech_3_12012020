@@ -40,15 +40,29 @@
 
 .features {
   background-color: $color-bg2;
-  margin: 1rem -1rem;
+  margin: 0 -1rem;
   padding: 3rem 1rem;
+
+  @media (min-width:1024px) {
+    border-radius: 2rem;
+  }
+
+  &__wrapper {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    column-gap: 1rem;
+    row-gap: 1rem;
+    @media (min-width:1024px) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
 }
 
 .feature {
   @include box;
   background-color: $color-bg;
   padding: 0.5rem;
-  margin: 1rem 0 1rem 1rem;
+  margin-left: 0.5rem;
   font-weight: 600;
   position: relative;
   transition-duration: 0.2s;
@@ -106,7 +120,21 @@
     text-decoration: none;
     color: inherit;
   }
+
+  // Index responsive
+  &__wrapper {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    column-gap: 1rem;
+    row-gap: 1rem;
+
+    @media (min-width:1024px) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
 }
+
+
 
 // make the content appear after the loader
 @keyframes appear {
