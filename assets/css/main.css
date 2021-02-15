@@ -419,14 +419,27 @@ article .article__heart:hover::after {
   z-index: 10;
   background-color: #f6f6f6;
   border-radius: 2rem 2rem 0 0;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  column-gap: 1rem;
+  row-gap: 1rem;
+}
+@media (min-width: 1024px) {
+  .main--resto {
+    grid-template-columns: repeat(3, 330.6666666667px);
+  }
 }
 .main--resto h1 {
   margin: 0.75rem 0;
   flex: 1;
   display: block;
 }
+.main--resto button {
+  grid-column: 1/4;
+}
 .main__title {
   display: flex;
+  grid-column: 1/4;
 }
 .main__heart {
   display: flex;
@@ -466,6 +479,7 @@ article .article__heart:hover::after {
   top: 1rem;
   position: relative;
   display: flex;
+  margin-bottom: 0.5rem;
 }
 .menu__wrapper:nth-of-type(2) article:nth-of-type(1) {
   animation: chainappear 1s 0.4s forwards;
