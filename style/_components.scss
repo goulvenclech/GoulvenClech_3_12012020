@@ -66,9 +66,10 @@ article {
   .article__cover {
     overflow: hidden;
     position: relative;
+    max-height: 13rem;
 
       img {
-        height: 10rem;
+        height: 13rem;
         width: 100%;
         object-fit: cover;
         transition-duration: 0.5s;
